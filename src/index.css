@@ -16,48 +16,48 @@ html,body{
 
 @font-face {
   font-family: "font-1";
-  src: url("./fonts/sh.woff2");
+  src: url("./assets/fonts/sh.woff2");
 }
 
 @font-face {
   font-family: "font-2";
-  src: url("./fonts/Rejouice-Headline.woff2");
+  src: url("./assets/fonts/Rejouice-Headline.woff2");
 }
 
 @font-face {
   font-family: "font-3";
-  src: url("./fonts/NBInternationalProBoo.woff2");
+  src: url("./assets/fonts/NBInternationalProBoo.woff2");
   font-weight: 100;
 }
 
 @font-face {
   font-family: "font-4";
-  src: url("./fonts/3856NeueMachina.woff2");
+  src: url("./assets/fonts/3856NeueMachina.woff2");
 }
 
 @font-face {
   font-family: "font-5";
-  src: url("./fonts/8186twklausanne.woff2");
+  src: url("./assets/fonts/8186twklausanne.woff2");
 }
 
 @font-face {
   font-family: "font-6";
-  src: url("./fonts/deveb-1.woff2");
+  src: url("./assets/fonts/deveb-1.woff2");
 }
 
 @font-face {
   font-family: "font-7";
-  src: url("./fonts/deveb-2.woff2");
+  src: url("./assets/fonts/deveb-2.woff2");
 }
 
 @font-face {
   font-family: "font-8";
-  src: url("./fonts/deveb-3.woff2");
+  src: url("./assets/fonts/deveb-3.woff2");
 }
 
 @font-face {
   font-family: "font-9";
-  src: url("./fonts/TT Coats Light DEMO.otf");
+  src: url("./assets/fonts/TT Coats Light DEMO.otf");
 }
 
 body::-webkit-scrollbar {
