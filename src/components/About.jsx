@@ -44,7 +44,7 @@ const About = () => {
   })
 
   return (
-    <main className='bg-[#FAF8F3] w-full min-h-screen select-none'>
+    <main className='bg-[#FAF8F3] overflow-auto w-full min-h-screen select-none'>
       <div className='w-full h-full flex flex-col md:flex-row justify-between items-center p-12 pt-24 lg:p-24 lg:pl-52'>
         <div className='left w-full h-80 md:w-[50vw] md:h-[63vh] lg:w-[50%] lg:h-[63vh] mb-6 bg-gradient-to-t from-black via-white to-white lg:mt-[-20vw] xl:h-[80vh] xl:mt-6'>
           <img src="./Images/about.png" alt="img" className='w-full h-full object-cover' />

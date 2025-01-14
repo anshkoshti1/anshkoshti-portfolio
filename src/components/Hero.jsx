@@ -702,7 +702,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="bg-[#FAF8F3] select-none">
+      <div className="bg-[#FAF8F3] overflow-auto select-none">
         <div className="upwards w-full">
           <div className="landingParent w-full h-[100vh] relative mb-10">
             <div

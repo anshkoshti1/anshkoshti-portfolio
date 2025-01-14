@@ -122,7 +122,7 @@ const Contact = () => {
           boxShadow: 'none'
         }}
       />
-      <div className='w-full h-full gap-5 p-4 md:p-10 flex flex-col lg:flex-row justify-between items-center'>
+      <div className='w-full overflow-auto h-full gap-5 p-4 md:p-10 flex flex-col lg:flex-row justify-between items-center'>
           <div className='w-full lg:w-1/2 mt-5 h-full flex flex-col justify-start items-start gap-2 md:border-b-[1px] lg:border-b-0 lg:border-r-[1px] border-[#111]'>
             <div className='w-full h-1/4 mb-5'>
               <h1 className='text-[5vw] md:text-3xl lg:text-5xl text-[#111] font-extralight font-["font-3"]'>Let's Talk</h1>
