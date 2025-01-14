@@ -8,29 +8,29 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-      // smooth: true,
-      smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 1.2,
+  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //     orientation: 'vertical',
+  //     smoothWheel: true,
+  //     wheelMultiplier: 1,
+  //     touchMultiplier: 2,
+  //     // smooth: true,
+  //     smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
+  //   });
 
-    const raf = (time) => {
-      lenis.raf(time);
-      ScrollTrigger.update();
-      requestAnimationFrame(raf);
-    };
-    requestAnimationFrame(raf);
+  //   const raf = (time) => {
+  //     lenis.raf(time);
+  //     ScrollTrigger.update();
+  //     requestAnimationFrame(raf);
+  //   };
+  //   requestAnimationFrame(raf);
 
-    return () => {
-      lenis.stop();
-    };
-  }, []);
+  //   return () => {
+  //     lenis.stop();
+  //   };
+  // }, []);
 
   useGSAP(()=>{
     gsap.from(".left",{
