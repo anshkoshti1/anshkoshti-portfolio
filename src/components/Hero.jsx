@@ -12,7 +12,7 @@ const Hero = () => {
   const marqueeRef = useRef(null);
   const navigate = useNavigate();
 
-  const handleProjectChange = () => {
+  const handleProjectsClick = () => {
     navigate("/projects");
     setTimeout(() => {
       window.scrollTo({
@@ -101,28 +101,29 @@ const Hero = () => {
     });
   });
 
-  // useEffect(() => {
-  //   const lenis = new Lenis({
-  //     duration: 2,
-  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  //     orientation: "vertical",
-  //     smoothWheel: true,
-  //     wheelMultiplier: 1,
-  //     touchMultiplier: 2,
-  //     smooth: true,
-  //     smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
-  //   });
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: "vertical",
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+      smooth: true,
+      smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
+    });
 
-  //   const raf = (time) => {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   };
-  //   requestAnimationFrame(raf);
+    const raf = (time) => {
+      lenis.raf(time);
+      ScrollTrigger.update();
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
 
-  //   return () => {
-  //     lenis.stop();
-  //   };
-  // }, []);
+    return () => {
+      lenis.stop();
+    };
+  }, []);
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -691,14 +692,14 @@ const Hero = () => {
     };
   }, []);
 
-  useGSAP(()=>{
-    gsap.from('.upwards', {
+  useGSAP(() => {
+    gsap.from(".upwards", {
       y: "100%",
       duration: 1,
       opacity: 0,
       ease: "power3.out",
-    })
-  })
+    });
+  });
 
   return (
     <>
@@ -878,10 +879,10 @@ const Hero = () => {
                   {/* Left Section */}
                   <div className="w-full xl:w-1/2 flex flex-col justify-center items-start text-[#111] md:mt-20 lg:mt-10 xl:mt-0 px-6 xl:px-32 pb-44 xl:pb-0">
                     <div className="animate1 w-full flex flex-col justify-center items-start select-none">
-                      <h1 className="leading-tight overflow-hidden z-[1000] font-['font-8'] tracking-tighter text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-2 xl:mb-6 sm:mb-10 whitespace-nowrap">
+                      <h1 className="leading-tight z-[1000] font-['font-8'] tracking-tighter text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-2 xl:mb-6 sm:mb-10 whitespace-nowrap">
                         Blobmixer
                       </h1>
-                      <h1 className="text-lg md:text-xl lg:text-2xl overflow-hidden z-[1000] font-['font-3'] font-extralight tracking-tight">
+                      <h1 className="text-lg md:text-xl lg:text-2xl z-[1000] font-['font-3'] font-extralight tracking-tight">
                         A mesmerizing WebGL experiment crafted with Three.js and
                         custom GLSL shaders, creating fluid, interactive blob
                         animations that respond to user input in real-time.
@@ -917,10 +918,10 @@ const Hero = () => {
                   {/* Left Section */}
                   <div className="w-full xl:w-1/2 flex flex-col justify-center items-start text-[#111] md:mt-20 lg:mt-0 px-6 xl:px-32 pb-44 xl:pb-0">
                     <div className="animate2 w-full flex flex-col justify-center items-start select-none">
-                      <h1 className="leading-tight overflow-hidden z-[1000] font-['font-8'] tracking-tighter text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-2 xl:mb-6 sm:mb-10 whitespace-nowrap">
+                      <h1 className="leading-tight z-[1000] font-['font-8'] tracking-tighter text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-2 xl:mb-6 sm:mb-10 whitespace-nowrap">
                         zajno.com
                       </h1>
-                      <h1 className="text-lg md:text-xl lg:text-2xl overflow-hidden z-[1000] font-['font-3'] font-extralight tracking-tight">
+                      <h1 className="text-lg md:text-xl lg:text-2xl z-[1000] font-['font-3'] font-extralight tracking-tight">
                         A captivating recreation of Zajno's award-winning
                         website, featuring advanced WebGL effects and custom
                         GLSL shaders. This project showcases intricate 3D
@@ -959,10 +960,10 @@ const Hero = () => {
                   {/* Left Section */}
                   <div className="w-full xl:w-1/2 flex flex-col justify-center items-start text-[#111] md:mt-20 lg:mt-0 px-6 xl:px-32 pb-44 xl:pb-0">
                     <div className="animate3 w-full flex flex-col justify-center items-start select-none">
-                      <h1 className="leading-tight overflow-hidden z-[1000] font-['font-8'] tracking-tighter text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-2 xl:mb-6 sm:mb-10 whitespace-nowrap">
+                      <h1 className="leading-tight z-[1000] font-['font-8'] tracking-tighter text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-2 xl:mb-6 sm:mb-10 whitespace-nowrap">
                         ochi.design
                       </h1>
-                      <h1 className="text-lg md:text-xl lg:text-2xl overflow-hidden z-[1000] font-['font-3'] font-extralight tracking-tight">
+                      <h1 className="text-lg md:text-xl lg:text-2xl z-[1000] font-['font-3'] font-extralight tracking-tight">
                         A dynamic recreation of ochi.design's website, featuring
                         smooth locomotive scrolling and intricate GSAP
                         animations. This project demonstrates advanced
@@ -1001,10 +1002,10 @@ const Hero = () => {
                   {/* Left Section */}
                   <div className="w-full xl:w-1/2 flex flex-col justify-center items-start text-[#111] md:mt-20 lg:mt-0 px-6 xl:px-32 pb-44 xl:pb-0">
                     <div className="animate4 w-full flex flex-col justify-center items-start select-none">
-                      <h1 className="leading-tight overflow-hidden z-[1000] font-['font-8'] tracking-tighter text-[2.9rem] md:text-6xl lg:text-7xl mb-6 md:mb-2 xl:mb-6 sm:mb-10 whitespace-nowrap">
+                      <h1 className="leading-tight z-[1000] font-['font-8'] tracking-tighter text-[2.9rem] md:text-6xl lg:text-7xl mb-6 md:mb-2 xl:mb-6 sm:mb-10 whitespace-nowrap">
                         Thomas Vance®
                       </h1>
-                      <h1 className="text-lg md:text-xl lg:text-2xl overflow-hidden z-[1000] font-['font-3'] font-extralight tracking-tight">
+                      <h1 className="text-lg md:text-xl lg:text-2xl z-[1000] font-['font-3'] font-extralight tracking-tight">
                         A meticulous recreation of Thomas Vance's portfolio
                         website, showcasing advanced GSAP animations and smooth
                         Lenis scrolling. This project features intricate text
@@ -1025,7 +1026,7 @@ const Hero = () => {
                 </div>
 
                 {/* animate5 */}
-                <div className="absolute w-full h-screen flex flex-col justify-center items-center animate5 z-[100] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#111] text-center p-4 md:p-10">
+                <div className="absolute overflow-hidden w-full h-screen flex flex-col justify-center items-center animate5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#111] text-center p-4 md:p-10">
                   <div className="w-full xl:w-1/2 flex flex-col justify-center items-center h-1/3">
                     <div className="w-full h-1/3 flex justify-center items-center">
                       <h1 className="leading-10 md:leading-20 font-['font-8'] tracking-tighter text-4xl md:text-6xl mb-8 md:mb-10">
@@ -1041,20 +1042,17 @@ const Hero = () => {
                           delivering engaging user experiences.
                         </h1>
                       </div>
-                      <div className="w-full h-1/2 flex justify-center items-end">
+                      <div className="w-full h-1/2 flex flex-col justify-center items-center">
                         <h1 className="text-md md:text-2xl font-['font-3'] font-extralight tracking-tighter mt-4 md:mt-6">
                           Ready to explore more?
                         </h1>
-                      </div>
+                        <button 
+                          onClick={handleProjectsClick}
+                         className="button z-[9999] mt-6 sm:mt-8 lg:mt-2 px-6 sm:px-8 py-2 sm:py-3 border-2 border-[#111] rounded-full text-md md:text-lg font-['font-3'] lg:hover:bg-[#111] lg:hover:text-white transition-colors duration-300">
+                          Visit Website
+                        </button>
+                      </div> 
                     </div>
-                  </div>
-                  <div className="w-full z-[1001] md:w-1/2 flex justify-center items-start h-1/5">
-                    <a
-                      onClick={handleProjectChange}
-                      className="button mt-6 md:mt-8 px-6 md:px-8 py-3 border-2 border-[#111] rounded-full text-sm md:text-base font-['font-3'] hover:bg-[#111] hover:text-white transition-colors duration-300"
-                    >
-                      View All Projects
-                    </a>
                   </div>
                 </div>
 

@@ -1,8 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Lenis from "lenis";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
 
@@ -82,28 +85,29 @@ const Contact = () => {
   };
    
 
-  // useEffect(() => {
-  //   const lenis = new Lenis({
-  //     duration: 1.2,
-  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  //     orientation: 'vertical',
-  //     smoothWheel: true,
-  //     wheelMultiplier: 1,
-  //     touchMultiplier: 2,
-  //     smooth: true,
-  //     smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
-  //   });
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+      smooth: true,
+      smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
+    });
 
-  //   const raf = (time) => {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   };
-  //   requestAnimationFrame(raf);
+    const raf = (time) => {
+      lenis.raf(time);
+      ScrollTrigger.update();
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
 
-  //   return () => {
-  //     lenis.stop();
-  //   };
-  // }, []);
+    return () => {
+      lenis.stop();
+    };
+  }, []);
 
   return (
     <main className='w-full min-h-screen z-[100] p-6 md:p-24 bg-[#FAF8F3] flex justify-center items-center'>
