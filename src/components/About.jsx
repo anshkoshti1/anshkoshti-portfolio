@@ -5,28 +5,28 @@ import gsap from 'gsap';
 
 const About = () => {
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-      smooth: true,
-      smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 1.2,
+  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //     orientation: 'vertical',
+  //     smoothWheel: true,
+  //     wheelMultiplier: 1,
+  //     touchMultiplier: 2,
+  //     smooth: true,
+  //     smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
+  //   });
 
-    const raf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-    requestAnimationFrame(raf);
+  //   const raf = (time) => {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   };
+  //   requestAnimationFrame(raf);
 
-    return () => {
-      lenis.stop();
-    };
-  }, []);
+  //   return () => {
+  //     lenis.stop();
+  //   };
+  // }, []);
 
   useGSAP(()=>{
     gsap.from(".left",{
@@ -44,7 +44,7 @@ const About = () => {
   })
 
   return (
-    <main className='bg-[#FAF8F3] overflow-auto w-full min-h-screen select-none'>
+    <main className='bg-[#FAF8F3] w-full min-h-screen select-none'>
       <div className='w-full h-full flex flex-col md:flex-row justify-between items-center p-12 pt-24 lg:p-24 lg:pl-52'>
         <div className='left w-full h-80 md:w-[50vw] md:h-[63vh] lg:w-[50%] lg:h-[63vh] mb-6 bg-gradient-to-t from-black via-white to-white lg:mt-[-20vw] xl:h-[80vh] xl:mt-6'>
           <img src="./Images/about.png" alt="img" className='w-full h-full object-cover' />

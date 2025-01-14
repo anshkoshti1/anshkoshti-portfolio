@@ -42,28 +42,28 @@ const Projects = () => {
     })
   })
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-      smooth: true,
-      smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 1.2,
+  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //     orientation: "vertical",
+  //     smoothWheel: true,
+  //     wheelMultiplier: 1,
+  //     touchMultiplier: 2,
+  //     smooth: true,
+  //     smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
+  //   });
 
-    const raf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-    requestAnimationFrame(raf);
+  //   const raf = (time) => {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   };
+  //   requestAnimationFrame(raf);
 
-    return () => {
-      lenis.stop();
-    };
-  }, []);
+  //   return () => {
+  //     lenis.stop();
+  //   };
+  // }, []);
 
   const handleMouseEnter = (index) => {
     const targetRef = projectRef.current[index];
@@ -106,7 +106,7 @@ const Projects = () => {
   };
 
   return (
-    <main className="parent overflow-auto w-full z-[100] bg-[#FAF8F3] pt-20 pb-10 px-2 md:pt-20 md:pb-10 md:-px-10 flex flex-col select-none">
+    <main className="parent w-full z-[100] bg-[#FAF8F3] pt-20 pb-10 px-2 md:pt-20 md:pb-10 md:-px-10 flex flex-col select-none">
       <div className="w-full normal flex flex-col">
         <div className="mainDiv w-full mix-blend-difference justify-start p-6 md:px-24 md:pb-5">
           <h1 className='text-white text-[8vw] md:text-[6vw] overflow-hidden font-["font-3"] tracking-tighter leading-[1.17]'>

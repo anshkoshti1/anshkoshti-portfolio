@@ -101,28 +101,28 @@ const Hero = () => {
     });
   });
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-      smooth: true,
-      smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 2,
+  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //     orientation: "vertical",
+  //     smoothWheel: true,
+  //     wheelMultiplier: 1,
+  //     touchMultiplier: 2,
+  //     smooth: true,
+  //     smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
+  //   });
 
-    const raf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-    requestAnimationFrame(raf);
+  //   const raf = (time) => {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   };
+  //   requestAnimationFrame(raf);
 
-    return () => {
-      lenis.stop();
-    };
-  }, []);
+  //   return () => {
+  //     lenis.stop();
+  //   };
+  // }, []);
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -702,7 +702,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="bg-[#FAF8F3] overflow-auto select-none">
+      <div className="bg-[#FAF8F3] select-none">
         <div className="upwards w-full">
           <div className="landingParent w-full h-[100vh] relative mb-10">
             <div
