@@ -50,7 +50,7 @@ const Projects = () => {
       smoothWheel: true,
       wheelMultiplier: 1,
       touchMultiplier: 2,
-      smooth: true,
+      // smooth: true,
       smooth: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent),
     });
 
