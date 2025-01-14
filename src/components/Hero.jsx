@@ -1048,10 +1048,10 @@ const Hero = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full md:w-1/2 flex justify-center items-start h-1/5">
+                  <div className="w-full z-[1001] md:w-1/2 flex justify-center items-start h-1/5">
                     <a
                       onClick={handleProjectChange}
-                      className="button z-[1001] mt-6 md:mt-8 px-6 md:px-8 py-3 border-2 border-[#111] rounded-full text-sm md:text-base font-['font-3'] hover:bg-[#111] hover:text-white transition-colors duration-300"
+                      className="button mt-6 md:mt-8 px-6 md:px-8 py-3 border-2 border-[#111] rounded-full text-sm md:text-base font-['font-3'] hover:bg-[#111] hover:text-white transition-colors duration-300"
                     >
                       View All Projects
                     </a>
