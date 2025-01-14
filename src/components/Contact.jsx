@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Lenis from "lenis";
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
