@@ -499,11 +499,10 @@ const Hero = () => {
     );
 
     tl.from(
-      ".animate5 .button",
+      ".b5",
       {
         opacity: 0,
-        y: 50,
-        display: "none",
+        y: 100,
         duration: 10,
         ease: "power3.out",
       },
@@ -534,12 +533,11 @@ const Hero = () => {
     );
 
     tl.to(
-      ".animate5 .button",
+      ".b5",
       {
         opacity: 0,
-        y: 50,
+        y: 100,
         duration: 10,
-        display: "none",
         ease: "power3.in",
       },
       "animate6"
@@ -1046,12 +1044,14 @@ const Hero = () => {
                         <h1 className="text-md md:text-2xl font-['font-3'] font-extralight tracking-tighter mt-4 md:mt-6">
                           Ready to explore more?
                         </h1>
-                        <button 
-                          onClick={handleProjectsClick}
-                         className="button z-[9999] mt-6 sm:mt-8 lg:mt-2 px-6 sm:px-8 py-2 sm:py-3 border-2 border-[#111] rounded-full text-md md:text-lg font-['font-3'] lg:hover:bg-[#111] lg:hover:text-white transition-colors duration-300">
-                          Visit Website
-                        </button>
                       </div> 
+                    </div>
+                    <div className="">
+                      <button
+                        onClick={handleProjectsClick}
+                        className="b5 mt-6 sm:mt-8 px-6 sm:px-8 py-2 sm:py-3 border-2 border-[#111] rounded-full text-md md:text-lg font-['font-3'] hover:bg-[#111] hover:text-white transition-colors duration-300">
+                        view all projects
+                      </button>
                     </div>
                   </div>
                 </div>

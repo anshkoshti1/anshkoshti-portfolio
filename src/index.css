@@ -99,6 +99,14 @@ body::-webkit-scrollbar {
   }
 }
 
+.b5 {
+  position: relative;
+  z-index: 9999;
+}
+
+.animate5 {
+  pointer-events: auto;
+}
 
 
 
