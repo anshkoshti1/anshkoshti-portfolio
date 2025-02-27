@@ -20,7 +20,7 @@ const PreLoader = ({ children }) => {
     // Horizontal line animation
     tl.to(".line", {
       width: "100%",
-      duration: 1,
+      duration: 1.5,
       ease: "power3.inOut",
     })
       .to(".line", {
@@ -31,19 +31,19 @@ const PreLoader = ({ children }) => {
         ".line-top",
         {
           y: "-50vh",
-          duration: 0.7,
+          duration: 0.5,
           ease: "power3.inOut",
         },
-        "-=0.3"
+        "a"
       )
       .to(
         ".line-bottom",
         {
           y: "50vh",
-          duration: 0.7,
+          duration: 0.5,
           ease: "power3.inOut",
         },
-        "-=0.7"
+        "a"
       )
       .to(
         ".text",
@@ -53,12 +53,13 @@ const PreLoader = ({ children }) => {
           ease: "power3.out",
           stagger: 0.2,
         },
-        "-=0.5"
+        "-=0.1"
       )
       .to(".preloader-container", {
         opacity: 0,
-        duration: 1,
+        duration: 2,
         ease: "power3.inOut",
+        transform: "translateY(-100vh)",
       });
   }, []);
 

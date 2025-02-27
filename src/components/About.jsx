@@ -71,7 +71,7 @@ const About = () => {
           </div>
           <div className='w-full flex'>
             <button 
-              onClick={() => window.open('./media/Ansh_Koshti_Resume.pdf', '_blank')}
+              onClick={() => window.open('./media/Ansh_Parul_Resume.pdf', '_blank')}
               className='mt-7 px-4 md:px-8 lg:px-10 py-2 md:py-3 lg:py-4 text-[#111] font-["font-3"] text-xs md:text-[1.4vw] lg:text-lg lg:hover:bg-[#111] lg:hover:text-[#fff] border-[1px] border-[#111] transition-colors duration-300 flex items-center gap-2'
             >
               Download Resume
