@@ -589,7 +589,7 @@ const Hero = () => {
       scrollTrigger: {
         trigger: ".abtParent",
         start: "-40% top",
-        end: "80% bottom",
+        end: "50% top",
         scrub: 2,
       },
     });
@@ -602,6 +602,7 @@ const Hero = () => {
         ease: "linear",
         stagger: 0.1,
         opacity: 0,
+        filter: "blur(10px)",
       },
       "same"
     );
@@ -629,6 +630,7 @@ const Hero = () => {
       duration: 0.3,
       ease: "linear",
       stagger: 0.2,
+      filter: "blur(10px)",
     });
 
     tl.from(".textAnimation .char", {
@@ -637,6 +639,7 @@ const Hero = () => {
       duration: 0.3,
       ease: "linear",
       stagger: 0.2,
+      filter: "blur(10px)",
     });
   }, []);
 
