@@ -22,6 +22,7 @@ const Projects = () => {
       y: 500,
       duration: 1,
       stagger: 0.1,
+      filter: "blur(10px)",
       ease: "power3.out"
     });
   }, []);

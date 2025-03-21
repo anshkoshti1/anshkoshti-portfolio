@@ -1052,7 +1052,7 @@ const Hero = () => {
                     <div className="">
                       <button
                         onClick={handleProjectsClick}
-                        className="b5 mt-6 sm:mt-8 px-6 sm:px-8 py-2 sm:py-3 border-2 border-[#111] rounded-full text-md md:text-lg font-['font-3'] hover:bg-[#111] hover:text-white transition-colors duration-300">
+                        className="b5 mt-6 sm:mt-8 px-6 sm:px-8 py-2 sm:py-3 border-2 border-[#111] rounded-full text-md md:text-lg font-['font-3'] hover:bg-[#111] hover:text-white transition-colors duration-300 pointer-events-auto">
                         view all projects
                       </button>
                     </div>
