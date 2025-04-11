@@ -280,9 +280,9 @@ const Hero = () => {
     tl.to(
       ".circle",
       {
-        backgroundColor: "#d6d1d1",
-        duration: 10,
-        ease: "power3.out",
+      background: "linear-gradient(135deg, #d6d1d1, #f5f5f5)",
+      duration: 10,
+      ease: "power3.out",
       },
       "animate2"
     );
@@ -353,9 +353,9 @@ const Hero = () => {
     tl.to(
       ".circle",
       {
-        backgroundColor: "#d1e822",
-        duration: 10,
-        ease: "power3.out",
+      background: "linear-gradient(135deg, #d1e822, #f5f5f5)",
+      duration: 10,
+      ease: "power3.out",
       },
       "animate3"
     );
@@ -426,9 +426,9 @@ const Hero = () => {
     tl.to(
       ".circle",
       {
-        backgroundColor: "#FFB499",
-        duration: 10,
-        ease: "power3.out",
+      background: "linear-gradient(135deg, #FFB499, #FFD1C4)",
+      duration: 10,
+      ease: "power3.out",
       },
       "animate4"
     );
@@ -512,9 +512,9 @@ const Hero = () => {
     tl.to(
       ".circle",
       {
-        backgroundColor: "#FFF3E0",
-        duration: 10,
-        ease: "power3.out",
+      background: "linear-gradient(135deg, #FFF3E0, #FFD1C4)",
+      duration: 10,
+      ease: "power3.out",
       },
       "animate5"
     );
@@ -588,8 +588,8 @@ const Hero = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".abtParent",
-        start: "-40% top",
-        end: "50% top",
+        start: "-50% top",
+        end: "30% top",
         scrub: 2,
       },
     });
@@ -597,7 +597,7 @@ const Hero = () => {
     tl.from(
       ".splitTxt p .word",
       {
-        y: 20,
+        y: 40,
         duration: 0.5,
         ease: "linear",
         stagger: 0.1,
